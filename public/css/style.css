@@ -1,0 +1,426 @@
+#carouselExampleCaptions{
+    height: 100vh;
+    overflow: hidden;
+}
+.carousel-main-caption {
+  position: absolute;
+  top: 25%; /* Adjust the vertical position */
+  left: 20%; /* Adjust the horizontal position */
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: #fff;
+  font-size: 5rem !important;
+  font-family: Monserrat;
+  font-weight: 800;
+}
+@media (max-width:820px) {
+  .carousel-main-caption {
+    position: absolute;
+    top: 20%; /* Adjust the vertical position */
+    left: 11%; /* Adjust the horizontal position */
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    font-size: 2rem !important;
+    font-family: Monserrat;
+    font-weight: 800;
+  }
+}
+
+#couselm{
+    /* padding-top: 4rem; */
+    /* height: 100vh; */
+    overflow: hidden;
+
+}
+
+
+/* Navbar Section */
+#nav-logo-img{
+  position: absolute;
+  height: 20vh;
+  width: 20vh;
+  top: 1px;
+}
+@media (max-width:900px) {
+  #nav-logo-img{
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    top: 1px;
+  }
+}
+
+#navsection {
+    background-color: transparent !important;
+  }
+
+  .navbar {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  .navbar-toggler {
+    border-color: #fff; /* Set the color for the navbar toggler button */
+    position: relative;
+    top:3vh;
+  }
+  .navbar-toggler:hover{
+    background-color: rgb(239, 25, 13);
+  }
+
+  .navbar-nav .nav-link {
+    /* color: #fff; Set the text color for links in the navbar */
+  }
+
+  #btn-watch-live {
+    margin-right: 10rem; /* Adjust the margin between "Watch Live" button and toggler button */
+    position: relative;
+    left:75vh;
+    top: 3vh;
+  }
+
+  @media (max-width: 989px) {
+    #btn-watch-live {
+      margin-right: -6rem; /* Reset margin for smaller screens */
+      margin-bottom: -30px; /* Add margin below "Watch Live" button on smaller screens */
+      display: block; /* Ensure "Watch Live" button takes full width on smaller screens */
+      position: sticky;
+      left: 12rem;
+    }
+  }
+
+  #btn-menu-toggle{
+    height: 37px !important;
+    width: 60px !important;
+    border-color: rgb(12, 54, 145);
+  }
+
+
+  /* User Option Selection Section */
+
+  #useropt{
+    background: linear-gradient(to right, #ffd700, #ff4500);
+    color: #fff;
+    font-family: roboto;
+  }
+  .useropt-title{
+    font-size: 4rem;
+    font-family: Montserrat;
+    padding-top: 5%;
+    font-weight: 600;
+    color: black;
+  }
+  @media (max-width:912px) {
+    .useropt-title{
+      font-size: 3rem;
+      font-family: Montserrat;
+      padding-top: 5%;
+      color: black;
+    }
+  }
+  .useropt-btn{
+    margin: 5% !important;
+    font-family: Montserrat;
+    font-weight: 600;
+    size:10vh;
+}
+
+  /* Top Videos Section */
+  .topytvids{
+    background: rgb(11, 11, 86);
+    color: #fff;
+  }
+
+  /* Carousel for WINNERS */
+
+  .card-winner-body{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+  }
+  @media (max-width:912px) {
+    .card-winner-body{
+     height: fit-content;
+    }
+    .carousel-winner-caption1{
+      font-size: 3rem;
+    }
+    
+  }
+  #carousel-winners{
+    overflow: hidden;
+    height: fit-content;
+    padding: 2%;
+  }
+  
+  .carousel-winner-caption1{
+    font-size: 3rem;
+  }
+
+ 
+
+  /* carosuel for Top Players */
+
+  #carousel-top-batsman{
+    padding: 5%;
+  }
+  #carousel-top-bowler{
+    padding: 5%;
+  }
+  .top-players-card{
+    background:#708090;
+    color: #fff;
+  }
+  
+
+
+
+
+  /* About Us Page Css */
+  /* =============================================== */
+
+  /* main form container */
+#about-body{
+  background: linear-gradient(to right, #ffd700, #ff4500); /* Light grayish-blue background color */
+  color: #343a40;
+}
+
+  #aboutform{
+   height: 100vh;
+   width: 100%;
+   position: relative;
+    padding-top: 12%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 0%;
+  }
+  @media (max-width:900px) {
+    #aboutform{
+      height: 61vh;
+      width: fit-content;
+      position: relative;
+       padding-top: 31%;
+     }
+  }
+
+
+
+   /* Teams Page Css */
+  /* =============================================== */
+
+  #teams-page-section{
+    padding-top: 8%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  #teams-page-section{
+    padding: 10%;
+  }
+
+
+
+  /* Venue Page Css */
+  /* =============================================== */
+
+  .map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
+.mapdscl{
+  padding-top: 19%;
+}
+
+
+
+
+
+
+
+/* Suraj Csss */
+/* ================================================================ */
+/* ================================================================ */
+
+
+#main-body{
+  background: #ff9c22;
+}
+
+#card-batter{
+  height: 20%;
+}
+
+.scroll-main{
+  padding-top: 8%;
+}
+@media (max-width:900px) {
+  .scroll-main{
+    padding-top: 22%;
+  }
+}
+
+
+
+.team-details{
+margin-top: 98px;
+/* background-color: cornflowerblue; */
+width: fit-content;
+position: relative;
+left: 30%;  
+}
+
+@media (max-width:900px) {
+.team-details{
+  margin-top: 98px;
+  /* background-color: cornflowerblue; */
+  width: fit-content;
+  position: unset;
+  left: auto;
+}
+
+}
+
+.team-players{
+padding: 3%;
+}
+@media (max-width:900px) {
+  .team-players{
+    padding: 10%;
+    }
+}
+
+/* #team-logo{
+border-radius: 20%;
+} */
+
+/* Scoll Pane codepensss */
+
+
+.scrolling-wrapper {
+overflow-x: scroll;
+overflow-y: hidden;
+white-space: nowrap;
+
+.scroll-card {
+  display: inline-block;
+}
+}
+
+.scrolling-wrapper-flexbox {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: auto;
+
+.scroll-card {
+  flex: 0 0 auto;
+  margin-right: 3px;
+}
+}
+
+.scroll-card {
+border: 2px solid red;
+width: 150px;
+height: inherit;
+background:black;}
+
+.scrolling-wrapper, .scrolling-wrapper-flexbox {
+height: 150px;
+margin-bottom: 20px;
+width: 100%;
+-webkit-overflow-scrolling: touch;
+&::-webkit-scrollbar {
+  display: none;
+}
+}
+
+.scroll-card img{
+width: -webkit-fill-available;
+}
+
+
+
+
+/* Sumit Csss */
+/* ================================================================ */
+/* ================================================================ */
+
+
+
+.ypl{
+  background-color: orange;
+  color: black;
+  height: fit-content;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.row .image{
+  margin-left: 2px;
+  padding-left: 20px;
+}
+.row .vs{
+  padding-left: 0px;
+}
+/* .row .tname1{
+  width: 200px;
+  text-align: center; 
+ 
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+} */
+/* .row .tname2{
+  width: 200px;
+  text-align: center;
+  
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  padding-left: 55px;
+} */
+.image .TName{
+  align-items: center;
+  justify-content: center;
+  /* padding-left: 1px; */
+}
+
+.image img{
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid orange;
+}
+
+.Match-section{
+  padding-top: 4%;
+}
+@media (max-width:900px) {
+  .Match-section{
+    padding-top: 10%;
+  }
+}

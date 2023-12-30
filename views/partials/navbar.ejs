@@ -1,0 +1,55 @@
+<section id="navsection">
+  <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../"><img id="nav-logo-img" src="https://i.ibb.co/PmFqVBn/YPLlogo-removebg-preview.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top"></a>
+        
+      <button type="button" id="btn-watch-live" class="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-brands fa-youtube"></i> Watch Live</button>
+<!-- top video player dropdown start -->
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTopLabel">Watch LIVE</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="col-md-4 mb-4">
+      <div class="card" style="width: 100%;">
+        <iframe src="https://www.youtube.com/embed/lpHy6m_3qJo?si=nwLAuAOdG7v8U1-Z?&autoplay=1" title="YPL Youtube LIVE Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" volume="0" allowfullscreen></iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- top video player dropdown End -->
+        <button id="btn-menu-toggle" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" style="color: #000;"></i>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <a class="nav-link" href="../"><h5 class="offcanvas-title" id="offcanvasNavbarLabel">YPL-Yellam Premier League</h5></a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../matches">Matches</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="../stats">Stats</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="../point-table">Points Table</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="../teams">Teams</a>
+                </li>
+                  <!-- <li><a class="dropdown-item" href="#">Auction</a></li> -->
+                  <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
+                  <!-- <li><a class="dropdown-item" href="#">Photos</a></li> -->
+                  <li class="nav-item"><a class="nav-link" href="../venue">Venue</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+</section>
