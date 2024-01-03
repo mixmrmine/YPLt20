@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const mysql = require('mysql2');
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
