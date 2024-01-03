@@ -20,10 +20,10 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 const pool = mysql.createPool({
-  host: 'db4free.net',
-  user: 'ypladmin',
-  password: 'Vinay@2024',
-  database: 'ypldb24',
+  host: process.env.Dbhost,
+  user: process.env.Dbuser,
+  password: process.env.DbPass,
+  database: process.env.DbName,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
