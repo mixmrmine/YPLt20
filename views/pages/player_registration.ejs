@@ -1,0 +1,134 @@
+<%- include('../partials/headlinks') %>
+
+  <body id="reg_pl">
+    <!-- Navbar Section Start -->
+    <%- include('../partials/navbar') %>
+      <!-- NAvbar Section End -->
+
+      <!-- Balaji-Star Content Start -->
+      <section calss="Teams-section-23">
+        <div class="container">
+          <div class="form-container">
+            <h2 class="mb-4 text-center">YPL Season 2 Player Registration</h2>
+            <form id="registrationForm" action="/submit-playerform" method="POST" enctype="multipart/form-data">
+              <div class="row mb-3">
+                <div class="col-md-6 form-group">
+                  <label class="form-label" for="firstName">First Name *</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" required />
+                </div>
+                <div class="col-md-6 form-group">
+                  <label class="form-label" for="lastName">Last Name *</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" required />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6 form-group">
+                  <label class="form-label" for="phoneNumber">Phone Number *</label>
+                  <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required
+                    placeholder="+91" />
+                </div>
+                <div class="col-md-6 form-group">
+                  <label class="form-label" for="email">Email *</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com"
+                    required />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6 form-group">
+                  <label class="form-label" for="teamCode">Team Code *</label>
+                  <input type="text" class="form-control" id="teamCode" name="teamCode" required />
+                </div>
+                <div class="col-md-6 form-group">
+                  <label class="form-label" for="playerPhoto">Player Photo *</label>
+                  <span style="color: red; font-size: small;" class="text-center">(Should Be less than 1 mb)</span>
+                  <input type="file" class="form-control" id="playerPhoto" name="playerPhoto" accept="image/*"
+                    required />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6 form-group">
+                  <label class="form-label" for="playerType">Player Type *</label>
+                  <select class="form-control" id="playerType" name="playerType" required>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allrounder">All-Rounder</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6 form-group">
+                  <label class="form-label" for="handSide">Batting/Bowling Hand Side *</label>
+                  <select class="form-control" id="handSide" name="handSide" required>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                  </select>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label class="form-label" for="instagramLink">Instagram Link</label>
+                  <input type="text" class="form-control" id="instagramLink" name="instagramLink" />
+                </div>
+              </div>
+              <button type="submit" class="btn form-btn">Submit</button>
+            </form>
+            <div id="success-message" class="alert alert-success d-none" role="alert">
+              Registration Completed successfully!
+            </div>
+            <div id="error-message" class="alert alert-danger d-none" role="alert">
+              <!-- Error message will be displayed here -->
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- Balaji-Star Content End -->
+
+      <!--Footer Section -->
+      <%- include('../partials/footer') %>
+
+        <!-- Links Of Javascript  Required -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const registrationForm = document.getElementById('registrationForm');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+
+            registrationForm.addEventListener('submit', function (event) {
+              event.preventDefault();
+
+              const formData = new FormData(registrationForm);
+
+              // Perform the fetch request with the formData
+              fetch('/submit-playerform', {
+                method: 'POST',
+                body: formData,
+              })
+                .then(response => response.json())
+                .then(data => {
+                  console.log('Server response:', data);
+
+                  if (data.success) {
+                    successMessage.classList.remove('d-none');
+                    errorMessage.classList.add('d-none');
+                    registrationForm.reset(); // Clear the form fields on success
+                    setTimeout(() => {
+                      location.reload();
+                    }, 5000);
+                  } 
+                  else {
+                    successMessage.classList.add('d-none');
+                    errorMessage.classList.remove('d-none');
+                    errorMessage.textContent = data.message;
+                  }
+                })
+                .catch(error => {
+                  console.error('Error:', error);
+                });
+            });
+          });
+        </script>
+
+
+
+
+        <%- include('../partials/footlinks') %>
+  </body>

@@ -88,6 +88,16 @@
       left: 12rem;
     }
   }
+@media (max-width: 400px){
+#btn-watch-live {
+    margin-right: 6rem;
+    margin-bottom: -30px;
+    display: block;
+    position: sticky;
+    left: 12rem;
+}
+}
+
 
   #btn-menu-toggle{
     height: 37px !important;
@@ -423,4 +433,49 @@ width: -webkit-fill-available;
   .Match-section{
     padding-top: 10%;
   }
+}
+
+/* Player Registration FormCsss */
+/* ================================================================ */
+/* ================================================================ */
+
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background for form */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 71px;
+  margin-bottom: 10px;
+}
+@media (max-width:900px) {
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for form */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 134px;
+    margin-bottom: 10px;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-btn {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+#reg_pl{
+  background: url('https://i.ibb.co/xMKntTG/regformbg.gif');
+  color: #343a40
 }
